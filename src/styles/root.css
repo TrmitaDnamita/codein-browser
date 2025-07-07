@@ -1,0 +1,19 @@
+:root {
+  --bg-color: #282c34;
+  --aside-color: #676e87;
+  --emphasis-color: #ffffff;
+  --border-color: #1a1a1a;
+  --editor-bg: #21252b;
+  --editor-fg: #d4d4d4;
+  --tab-hover: #404558;
+}
+
+body.light {
+  --bg-color: #fdf6e3;
+  --aside-color: #8f8f8f;
+  --emphasis-color: #000000;
+  --border-color: #e0e0e0;
+  --editor-bg: #fefefe;
+  --editor-fg: #333;
+  --tab-hover: #a1a6b4;
+}

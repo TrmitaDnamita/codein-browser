@@ -1,0 +1,29 @@
+@media screen and (max-width: 432px) {
+  body {
+    min-width: 240px;
+  }
+  #nav-header h1 {
+    font-size: 1.4em;
+  }
+  #nav-tabs button {
+    width: 100%;
+    padding-inline: 0;
+  }
+  #nav-tabs button svg {
+    display: none;
+  }
+  #preview-container  {
+    &[data-state="miniature"] {
+      min-width: 180px;
+    }
+  }
+}
+
+@media screen and (max-width: 240px) {
+  #preview-container {
+    &[data-state="miniature"] {
+      bottom: 2px;
+      left: 30px;
+    }
+  }
+}

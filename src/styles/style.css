@@ -1,0 +1,28 @@
+@import './root.css';
+@import './nav.css';
+@import './editor.css';
+@import './query-first.css';
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+html {
+  color-scheme: light dark;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bg-color);
+  color: var(--emphasis-color);
+}

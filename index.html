@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/logo.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CodeIn Browser</title>
+    
+    <script type="module" src="/src/monaco-worker.ts"></script>
+    <script type="module" src="/src/utils/tabIcons.ts"></script>
+    <script type="module" defer src="./src/events.ts"></script>
+    <script type="module" defer src="/src/main.ts"></script>
+    <link rel="stylesheet" href="./src/styles/style.css">
+  </head>
+  <body>
+    <header id="nav-header">
+      <img src="/logo.svg" alt="CodeIn Browser Logo" />
+      <div style="flex-grow: 1"></div>
+      <button id="toggle-theme">🌜/🌞</button>
+    </header>
+    <main id="main-container">
+      <div id="nav-tabs">
+        <button id="html" data-state="shown">HTML</button>
+        <button id="css" data-state="hidden">CSS</button>
+        <button id="code" data-state="hidden">JS</button>
+        <button id="preview" data-state="hidden">Preview</button>
+      </div>
+      <section id="editor-container">
+        <div id="html-container" data-state="shown"></div>
+        <div id="css-container" data-state="hidden"></div>
+        <div id="code-container" data-state="hidden"></div>
+        <iframe id="preview-container" frameborder="0" data-state="miniature"></iframe>
+      </section>
+    </main>
+  </body>
+</html>
