@@ -9,6 +9,7 @@ export const createEditor = (editorContainer: HTMLElement, language: string, val
       theme: 'vs-dark',
       wordWrap: 'on',
       automaticLayout: true,
+      fixedOverflowWidgets: true,
     })
   } catch (error) {
     console.error(error)

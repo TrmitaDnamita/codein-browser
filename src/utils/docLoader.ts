@@ -119,7 +119,3 @@ export const update = (value: string[]): void => {
 
   refreshIframe(value);
 }
-
-/* HTML
-
-*/
