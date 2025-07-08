@@ -10,13 +10,20 @@ const docRef = {
   <h1 id="welcome-screen">👋 Welcome to CodeIn Browser</h1>
   <p>This editor is already inside the <code>&lt;body&gt;</code> tag, so you can start writing HTML directly 💻.</p>
   <p>The JavaScript tab also supports <strong>TypeScript</strong> and is loaded at the end of the body 🧠.</p>
-  <p>The URL will be encrypted after the <em>'#'</em> symbol and can be shared with anyone you trust 🤝. <strong>Changes will persist on reload</strong></p>\n</main>`,
+  <p>The URL will be encrypted after the <em>'#'</em> symbol and can be shared with anyone you trust 🤝. <strong>Changes will persist on reload</strong></p>
+  <button id="confeti-boy">Click Me!</button>\n</main>`,
   cssLoad: `html {
   background-color: #282c34;
   color: #d4d4d4;
   text-align: center;
+  padding: 1rem;
+  font-family: system-ui, Oxygen, sans-serif;
 }`,
-  jsLoad: '', 
+  jsLoad: `import confetti from 'https://cdn.skypack.dev/canvas-confetti'
+
+document.getElementById('confeti-boy')
+    .addEventListener('click', () => confetti());
+;`, 
 }
 
 const element = {
@@ -50,7 +57,7 @@ const refreshIframe = (value : string[]) => {
       </head>
       <body>
         ${value[0]}
-        <script>${value[2]}</script>
+        <script type="module">${value[2]}</script>
       </body>
     </html>
     `);
